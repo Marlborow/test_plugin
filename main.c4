@@ -7,8 +7,8 @@
   //   :Hello        toggle the card
   //   <leader>h     the same
   //   q / Esc       close it while it has focus
-
-cvim.pkg.version("1.0.0");
+string Ver = "1.0.0";
+cvim.pkg.version(ver);
 
   class Hello {
       int  panel;
@@ -32,7 +32,7 @@ cvim.pkg.version("1.0.0");
           cvim.draw.text(cw, ch - 4, " hello from a package ");
 
           cvim.draw.color(205, 212, 226, 255);
-          cvim.draw.text(cw, ch * 2 + 2, " version   " + VERSION);
+          cvim.draw.text(cw, ch * 2 + 2, " version   " + Ver);
           cvim.draw.text(cw, ch * 3 + 2, " opened    " + cvim.str(opened) + "x");
 
           string p = cvim.buf.path();
@@ -58,7 +58,7 @@ cvim.pkg.version("1.0.0");
           panel  = cvim.draw.panel(4, 2, 40, 10, this.paint);
           cvim.draw.input(panel, this.key);
           cvim.draw.focus(panel);
-          cvim.msg("cvim-hello " + VERSION);
+          cvim.msg("cvim-hello " + Ver);
       }
 
       void close(){
