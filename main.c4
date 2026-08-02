@@ -8,7 +8,7 @@
   //   <leader>h     the same
   //   q / Esc       close it while it has focus
 string Ver = "1.0.0";
-cvim.pkg.version(ver);
+cvim.pkg.version(Ver);
 
   class Hello {
       int  panel;
